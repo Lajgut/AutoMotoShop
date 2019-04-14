@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:auto_moto_shop/HomePageRoute.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,21 +21,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: HomePageRoute(),
     );
   }
 }
 
-class HomePage extends StatefulWidget {
-
-  @override
-  State createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-
-  }
-}
