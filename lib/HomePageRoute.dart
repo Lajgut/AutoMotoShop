@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
 
 class HomePageRoute extends StatefulWidget {
@@ -21,20 +22,28 @@ class _HomePageState extends State<HomePageRoute> {
 
   BottomNavigationBar _buildBottomBar() => BottomNavigationBar(
     currentIndex: 0,
+    type: BottomNavigationBarType.fixed,
     items: [
       BottomNavigationBarItem(
           icon: new Icon(Icons.home),
-          title: Text("Главная")
+          title: Text("О нас")
       ),
       BottomNavigationBarItem(
-          icon: new Icon(Icons.home),
-          title: Text("Главная")
+          icon: new Icon(Icons.build),
+          title: Text("Запчасти")
       ),
       BottomNavigationBarItem(
-          icon: new Icon(Icons.home),
-          title: Text("Главная")
+          icon: new Icon(Icons.perm_phone_msg),
+          title: Text("Контакты")
       )
     ],
+    onTap: (index) {
+      navigateAnotherScreen(index);
+
+    },
   );
 
+  void navigateAnotherScreen(int index) {
+    debugPrint('index = $index');
+  }
 }
