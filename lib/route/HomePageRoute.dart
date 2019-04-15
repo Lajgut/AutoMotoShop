@@ -38,12 +38,12 @@ class _HomePageState extends State<HomePageRoute> {
       )
     ],
     onTap: (index) {
-      navigateAnotherScreen(index);
+      _navigateAnotherScreen(index);
 
     },
   );
 
-  void navigateAnotherScreen(int index) {
+  void _navigateAnotherScreen(int index) {
     debugPrint('index = $index');
   }
 }
