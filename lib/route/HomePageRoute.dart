@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
+import 'package:auto_moto_shop/data/MyConstants.dart';
+import 'package:auto_moto_shop/widget/MainWidget.dart';
 
 
 class HomePageRoute extends StatefulWidget {
@@ -10,40 +11,49 @@ class HomePageRoute extends StatefulWidget {
 
 class _HomePageState extends State<HomePageRoute> {
 
+  var _currentIndex = 0;
+  final List<Widget> _children = [
+    MainWidget(),
+    MainWidget(),
+    MainWidget()
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("AutoMotoShop"),
+        title: Text(textAppName),
       ),
+      body: _children[_currentIndex],
       bottomNavigationBar: _buildBottomBar(),
     );
   }
 
   BottomNavigationBar _buildBottomBar() => BottomNavigationBar(
-    currentIndex: 0,
+    currentIndex: _currentIndex,
     type: BottomNavigationBarType.fixed,
     items: [
       BottomNavigationBarItem(
           icon: new Icon(Icons.home),
-          title: Text("О нас")
+          title: Text(textBottomBarFirstPosition)
       ),
       BottomNavigationBarItem(
           icon: new Icon(Icons.build),
-          title: Text("Запчасти")
+          title: Text(textBottomBarSecondPosition)
       ),
       BottomNavigationBarItem(
           icon: new Icon(Icons.perm_phone_msg),
-          title: Text("Контакты")
+          title: Text(textBottomBarThirdPosition)
       )
     ],
     onTap: (index) {
-      _navigateAnotherScreen(index);
-
+      _bottomMenuTap(index);
     },
   );
 
-  void _navigateAnotherScreen(int index) {
-    debugPrint('index = $index');
+  void _bottomMenuTap(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
   }
 }
