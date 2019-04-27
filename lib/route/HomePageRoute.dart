@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:auto_moto_shop/data/MyConstants.dart';
 import 'package:auto_moto_shop/widget/MainWidget.dart';
+import 'package:auto_moto_shop/widget/CatalogWidget.dart';
+import 'package:auto_moto_shop/widget/ContactUsWidget.dart';
 
 
 class HomePageRoute extends StatefulWidget {
@@ -14,8 +16,8 @@ class _HomePageState extends State<HomePageRoute> {
   var _currentIndex = 0;
   final List<Widget> _children = [
     MainWidget(),
-    MainWidget(),
-    MainWidget()
+    CatalogWidget(),
+    ContactUsWidget()
   ];
 
   @override
