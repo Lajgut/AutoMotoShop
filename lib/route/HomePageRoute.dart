@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:auto_moto_shop/data/MyConstants.dart';
 import 'package:auto_moto_shop/widget/MainWidget.dart';
-import 'package:auto_moto_shop/widget/CatalogWidget.dart';
+import 'package:auto_moto_shop/widget/catalog/CatalogWidget.dart';
 import 'package:auto_moto_shop/widget/ContactUsWidget.dart';
 
 
