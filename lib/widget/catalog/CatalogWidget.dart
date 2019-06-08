@@ -9,20 +9,11 @@ class CatalogWidget extends StatefulWidget {
 class _CatalogState extends State<CatalogWidget> {
   @override
   Widget build(BuildContext context) => Container(
-          child: Column(children: [
-        /*Text(
-          "каталог какой то",
-          style: TextStyle(color: Colors.black, fontSize: 21),
-          textAlign: TextAlign.center,
-        ),*/
-        SizedBox(
-          height: 200,
-          child: PageView(
+    alignment: Alignment.center,
+        child: PageView(
             controller: _buildPageController(),
-            children: _createPageViewItems()
-          ),
-        )
-      ]));
+            children: _createPageViewItems()),
+      );
 
   PageController _buildPageController() => PageController(initialPage: 1);
 

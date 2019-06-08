@@ -8,7 +8,12 @@ class CatalogItemWidget extends StatefulWidget {
 class _CatalogItemState extends State<CatalogItemWidget> {
   @override
   Widget build(BuildContext context) => Container(
-        child: Image(
-            image: AssetImage("assets/images/pic.jpeg")),
-      );
+          child: Column(
+        children: <Widget>[
+          Image(image: AssetImage("assets/images/pic.jpeg")),
+          Text("Свечи от мотика"),
+          Text("4230р")
+        ],
+        mainAxisAlignment: MainAxisAlignment.center,
+      ));
 }
